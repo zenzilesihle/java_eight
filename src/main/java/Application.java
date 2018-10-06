@@ -8,7 +8,7 @@ public class Application {
     public static void main(String[] args) {
         List<Person> people = getListOfPeople();
 
-//        people.sort(Comparator.comparingInt(Person::getAge));
+        people.sort(Comparator.comparingInt(Person::getAge));
         people.sort(Comparator.comparing(Person::getFirstName));
         people.sort(Comparator.comparing(Person::isNinja));
 
@@ -16,7 +16,6 @@ public class Application {
                 System.out.println(value.getFirstName() +"  \t\t"+ value.getAge())
         );
 
-//        System.out.println(people);
     }
 
     private static List<Person> getListOfPeople() {
